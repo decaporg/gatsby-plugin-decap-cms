@@ -1,5 +1,6 @@
 /* global CMS_PUBLIC_PATH */
 import netlifyIdentityWidget from "netlify-identity-widget"
+import setImmediate from "setImmediate"
 
 window.netlifyIdentity = netlifyIdentityWidget
 
