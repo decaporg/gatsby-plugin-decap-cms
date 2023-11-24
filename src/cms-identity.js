@@ -1,6 +1,5 @@
 /* global CMS_PUBLIC_PATH */
 import netlifyIdentityWidget from "netlify-identity-widget"
-import setImmediate from "setImmediate"
 
 window.netlifyIdentity = netlifyIdentityWidget
 
@@ -19,8 +18,4 @@ netlifyIdentityWidget.on(`init`, user => {
   }
 })
 
-// Boot on next tick to prevent clashes with css injected into NetlifyCMS
-// preview pane.
-setImmediate(() => {
-  netlifyIdentityWidget.init()
-})
+netlifyIdentityWidget.init()
